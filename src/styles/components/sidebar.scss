@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sidebar-container {
+    @apply flex;
+
+    .sidebar {
+        @apply p-4 h-screen text-white hidden w-[10vw]
+        lg:flex lg:flex-col; 
+        background: linear-gradient(30deg, #f301fe, #c41afd);
+        box-shadow: 6px 0px 20px 1px rgba(0, 0, 0, 0.2);
+        z-index: 99999;
+
+        &.mobile {
+            @apply block lg:hidden xl:hidden;
+        }
+
+        .logo-container {
+            @apply pt-3 pb-7;
+            .logo {
+                @apply w-full;
+            }
+        }
+
+
+        .navigation {
+            @apply h-full flex flex-col justify-center;
+
+            .icon-container {
+                @apply my-7 w-full flex justify-center text-[2vw];
+
+                .icon {
+                    @apply py-3 px-4 rounded-lg;
+                    &.active{
+                        background: #8618ab;
+                        &:hover{
+                            cursor: default;
+                        }
+                    }
+
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+    
+            }
+        }
+
+    }
+
+    .content {
+        @apply w-full;
+    }
+}
