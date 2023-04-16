@@ -8,9 +8,7 @@ const VerClients: React.FC = () => {
     const { clients } = useVerClients()
     const redirecionar = useNavigateClient();
     const { redireccionarCrear, redireccionarVer } = redirecionar;
-
-    const data = redireccionarVer
-    console.log(data)
+    
     return (
 
         <div>

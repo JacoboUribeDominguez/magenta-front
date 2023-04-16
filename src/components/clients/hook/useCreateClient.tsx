@@ -3,7 +3,9 @@ import useNavigateClient from "../../../hooks/useNavigateClient";
 import useRedux from "../../../hooks/useRedux";
 
 const useCreateClient = (id: string = '') => {
+    
     const { getClients } = useRedux()
+    
     const obtenerDataInicial = () => {
         if (id) {
             const cliente = getClients()?.find((client) => client.id_cliente === id)
@@ -27,10 +29,8 @@ const useCreateClient = (id: string = '') => {
             correo: ''
         }
     }
+    
     const [data, setData] = useState(obtenerDataInicial())
-
-    console.log(getClients)
-
 
     const navegarVolver = useNavigateClient()
     const { redireccionarVolver } = navegarVolver;

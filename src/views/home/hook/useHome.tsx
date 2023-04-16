@@ -9,11 +9,11 @@ const useHome = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
-        console.log('i join')
-        fetch('http://localhost:3000/hostings')
+        console.log('i join hostings')
+        fetch('http://localhost:3000/')
             .then((res) => res.json())
             .then((hostings) => {
-                dispatch(setHostings(hostings))
+                dispatch(setHostings(hostings.hostings))
             })
     }, [])
 

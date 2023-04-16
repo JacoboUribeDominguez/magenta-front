@@ -14,7 +14,7 @@ const Home: React.FC = () => {
       <div className="flex justify-between">
         <h1 className="home-title">Hostings</h1>
         <div className="flex justify-center items-center mr-5">
-          <button className="bg-primary-500 px-3 py-1 text-3xl rounded-full text-white" onClick={() => setIsOpen(true)}>+</button>
+          <button className="bg-primary-500 px-3 py-1 text-3xl rounded-full text-white" onClick={() => setIsOpen(true)}>{isOpen ? 'x' : '+'}</button>
         </div>
       </div>
       <Table />

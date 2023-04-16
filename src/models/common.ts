@@ -1,11 +1,14 @@
 import { IconType } from "react-icons";
 
 export type Hostings = {
+    id_hosting: string,
     url: string,
-    name: string,
-    quantity: string,
-    state: string,
-    notes: string
+    usuario: string,
+    contrasena: string,
+    fecha_vencimiento: string,
+    paquete: string,
+    estado: string,
+    notas: string
 };
 
 export type initialStateHostings = {

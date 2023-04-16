@@ -12,7 +12,7 @@ const useRedux = () => {
         return state.hosting.hostings
     }
 
-    const getClients = () : Clients[] | [] | null => {
+    const getClients = (): Clients[] | [] | null => {
         return state.client.clients
     }
 
