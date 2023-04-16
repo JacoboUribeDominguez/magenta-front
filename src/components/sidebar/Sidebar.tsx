@@ -1,11 +1,19 @@
 import { Outlet } from 'react-router-dom'
-import { IconClients, IconServer } from '../../const/icons'
+import { IconClients, IconPackage, IconServer } from '../../const/icons'
 import useSidebar from './hook/useSidebar'
+import Login from '../../views/Login/Login';
 
 const Sidebar = () => {
 
-  const objeto = useSidebar();
-  const {redireccionar, volver} = objeto
+  const { 
+    user,
+    redireccionar, 
+    volver 
+  } = useSidebar();
+
+  if(user){
+    return <Login />
+  }
 
   return (
     <div className="sidebar-container">
@@ -23,9 +31,16 @@ const Sidebar = () => {
           </div>
           <div className="icon-container">
             <div className="icon"
-              onClick={() => redireccionar()}
+              onClick={() => redireccionar('/client')}
             >
               {IconClients}
+            </div>
+          </div>
+          <div className="icon-container">
+            <div className="icon"
+              onClick={() => redireccionar('/package')}
+            >
+              {IconPackage}
             </div>
           </div>
         </div>

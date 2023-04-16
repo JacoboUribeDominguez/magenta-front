@@ -3,9 +3,11 @@ import { useNavigate } from "react-router-dom"
 const useSidebar = () => {
 
     const navigate = useNavigate()
+    
+    const user = localStorage.getItem('user');
 
-    const redireccionar = () => {
-        navigate("/client")
+    const redireccionar = (route: string) => {
+        navigate(`${route}`)
     }
 
     const volver = () => {
@@ -15,7 +17,8 @@ const useSidebar = () => {
     return {
 
         redireccionar: redireccionar,
-        volver: volver
+        volver: volver,
+        user
 
     }
 }

@@ -11,8 +11,8 @@ const Home: React.FC = () => {
   return (
     <div className="home-container">
       { isOpen && <CrearDominio cerrar={ () => setIsOpen(false) } /> }
-      <div className="flex justify-between">
-        <h1 className="home-title">Hostings</h1>
+      <div className="flex justify-between pt-6">
+        <h1 className="general-title">Hostings</h1>
         <div className="flex justify-center items-center mr-5">
           <button className="bg-primary-500 px-3 py-1 text-3xl rounded-full text-white" onClick={() => setIsOpen(true)}>+</button>
         </div>

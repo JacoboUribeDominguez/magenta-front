@@ -7,6 +7,7 @@ import Home from "../views/home/Home";
 import Client from "../views/client/Client";
 import CrearClient from "../components/clients/CrearClient";
 import { render } from "react-dom";
+import Package from "../views/package/Package";
 
 const router = createBrowserRouter([
     {
@@ -23,11 +24,15 @@ const router = createBrowserRouter([
             },
             {
                 path: "crearClient",
-                element: <CrearClient/>
+                element: <CrearClient />
             },
             {
                 path: "modificarClient/:id",
-                element: <CrearClient/>
+                element: <CrearClient />
+            },
+            {
+                path: "package",
+                element: <Package />
             }
         ]
     },

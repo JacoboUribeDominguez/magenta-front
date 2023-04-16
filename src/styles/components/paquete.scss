@@ -1,0 +1,12 @@
+.package-card {
+    @apply border border-transparent flex flex-col justify-center items-center h-[10rem] rounded-xl bg-gradinat-primary-lr shadow-2xl relative;
+
+    transition: 300ms;
+
+    &:hover {
+        transform: scale(1.05) rotate(2deg);
+        transition: 300ms;
+        cursor: pointer;
+    }
+
+}
