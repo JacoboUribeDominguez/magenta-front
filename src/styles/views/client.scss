@@ -1,0 +1,42 @@
+.client-container {
+
+    .client-title {
+        @apply text-[2.5vw] font-semibold text-white bg-primary-500 mt-6 w-[25vw] pl-4;
+        background: linear-gradient(30deg, #c41afd, #94dcf6);
+        border-top-right-radius: 30px;
+    }
+
+    .client-input {
+        @apply p-5 m-3 border border-primary-500;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    div {
+        @apply grid grid-cols-4 gap-7;
+
+        svg {
+            @apply text-center;
+            font-size: 100px;
+        }
+
+        .p-card {
+            @apply m-3 mx-3;
+            height: auto;
+            width: 100%;
+            display: inline-flex;
+
+            .p-card-title {
+                color: #c41afd;
+            }
+
+            .p-card-body {
+                @apply flex flex-col;
+
+                .p-card-content {
+                    @apply flex flex-col m-0 p-0;
+                }
+            }
+        }
+    }
+}

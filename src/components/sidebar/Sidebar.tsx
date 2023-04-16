@@ -1,8 +1,12 @@
-import React from 'react'
 import { Outlet } from 'react-router-dom'
-import { IconClients, IconServer } from '../const/icons'
+import { IconClients, IconServer } from '../../const/icons'
+import useSidebar from './hook/useSidebar'
 
 const Sidebar = () => {
+
+  const objeto = useSidebar();
+  const {redireccionar, volver} = objeto
+
   return (
     <div className="sidebar-container">
       <div className="sidebar">
@@ -11,12 +15,16 @@ const Sidebar = () => {
         </div>
         <div className="navigation">
           <div className="icon-container active">
-            <div className="icon active">
+            <div className="icon active"
+              onClick={() => volver()}
+            >
               {IconServer}
             </div>
           </div>
           <div className="icon-container">
-            <div className="icon">
+            <div className="icon"
+              onClick={() => redireccionar()}
+            >
               {IconClients}
             </div>
           </div>

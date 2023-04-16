@@ -5,6 +5,7 @@
 
 /*views*/
 @import "./views/home.scss";
+@import "./views/client.scss";
 
 @tailwind base;
 @tailwind components;
