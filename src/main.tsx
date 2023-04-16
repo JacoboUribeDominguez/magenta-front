@@ -10,7 +10,7 @@ import router from './router';
 
 import store from './stageManagement/store'
 
-import "./styles/index.css"
+import "./styles/index.scss"
 
 //theme
 import "primereact/resources/themes/lara-light-indigo/theme.css";
