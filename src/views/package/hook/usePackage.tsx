@@ -1,13 +1,22 @@
-import React, { useState } from 'react'
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { setPackages } from "../../../stageManagement/reducers/packageReducer";
+
 
 const usePackage = () => {
 
-    const [packageSelected, setPackageSelected] = useState('');
+    const dispatch = useDispatch()
 
-    return {
-        packageSelected,
-        setPackageSelected
+    const getPackages = async () => {
+        console.log('i join packages')
+        const data = await fetch('http://localhost:3000/packages')
+        const result = await data.json()
+        dispatch(setPackages(result.packages))
     }
+
+    useEffect(() => {
+        getPackages()
+    }, [])
 }
 
 export default usePackage

@@ -38,7 +38,7 @@ const CrearDominio = ({ cerrar }: Props) => {
                     type="text" placeholder="Digita la contraseña" 
                     onChange={(e) => modificarDataHosting(e.target.name, e.target.value)} value={contrasena}
                 />
-                {/* <input className="my-4 border border-b-white border-t-0 border-l-0 border-r-0 placeholder:text-white bg-transparent px-2" type="text" placeholder="Selecciona el paquete" /> */}
+                {/* <input className="my-4 border border-b-white border-t-0 border-l-0 border-r-0 placeholder:text-white bg-transparent px-2" type="text" placeholder="Selecciona el package" /> */}
                 <input 
                     name="fecha_vencimiento"
                     className="my-4 border border-b-white border-t-0 border-l-0 border-r-0 placeholder:text-white bg-transparent px-2" 

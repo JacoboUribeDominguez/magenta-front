@@ -14,10 +14,10 @@ const Table = () => {
       <Column field="cliente" sortable header="Cliente" />
       <Column field="contrasena" sortable header="Contraseña" />
       <Column field="fecha_vencimiento" sortable header="Fecha de vencimiento" />
-      <Column field="paquete" sortable header="paquete" />
+      <Column field="package" sortable header="package" />
       <Column field="estado" sortable header="estado" />
       <Column field="notas" sortable header="Notas" />
-      {/* <Column field="quantity" sortable header="Paquete" /> */}
+      {/* <Column field="quantity" sortable header="package" /> */}
       {/* <Column field="state" sortable header="Estado" /> */}
       {/* <Column header="Dominios"> <button onClick={() => {}}>Ver dominios</button ></Column> */}
       {/* <Column body={<div className="icon-container"><div className="icon"><AiOutlineEllipsis /></div></div>} /> */}

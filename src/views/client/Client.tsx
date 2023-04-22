@@ -8,6 +8,8 @@ const Client: React.FC = () => {
     return (
         <div className="client-container">
             <h1 className="client-title">Clients</h1>
+            <div className="flex justify-center items-center mr-5">
+            </div>
             <input className="client-input" placeholder="Buscar cliente" />
             <VerClients />
         </div>

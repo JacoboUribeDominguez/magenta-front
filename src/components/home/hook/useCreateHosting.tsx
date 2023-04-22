@@ -1,5 +1,4 @@
-import { useReducer, useState } from "react"
-import useRedux from "../../../hooks/useRedux"
+import { useState } from "react"
 
 const useCreateHosting = () => {
 

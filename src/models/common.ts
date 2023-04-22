@@ -6,7 +6,7 @@ export type Hostings = {
     usuario: string,
     contrasena: string,
     fecha_vencimiento: string,
-    paquete: string,
+    package: string,
     estado: string,
     notas: string
 };

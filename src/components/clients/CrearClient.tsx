@@ -1,7 +1,7 @@
 import useCreateClient from "./hook/useCreateClient";
 import { IconAtrasClient } from "../../const/icons";
 import useNavigateClient from "../../hooks/useNavigateClient";
-import { useParams } from "react-router-dom";
+import { useParams, useActionData } from "react-router-dom";
 
 
 const CrearClient = () => {
@@ -11,6 +11,7 @@ const CrearClient = () => {
     const { nombre, direccion, identificacion, telefono, ciudad, correo } = data
     const redireccion = useNavigateClient()
     const { redireccionarVolver } = redireccion;
+
     return (
         <div className="flex flex-col items-center justify-around h-screen">
             <div>

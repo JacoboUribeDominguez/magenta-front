@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { hostingSlice } from '../reducers/hostingReducer';
 import { clientSlice } from '../reducers/clientReducer';
+import { packageSlice } from '../reducers/packageReducer';
 
 const store = configureStore({
     reducer: {
         hosting: hostingSlice.reducer,
-        client: clientSlice.reducer
+        client: clientSlice.reducer,
+        package: packageSlice.reducer
     }
 })
 

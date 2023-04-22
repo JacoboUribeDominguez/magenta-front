@@ -9,7 +9,6 @@ const useHome = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
-        console.log('i join hostings')
         fetch('http://localhost:3000/')
             .then((res) => res.json())
             .then((hostings) => {
