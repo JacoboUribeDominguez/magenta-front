@@ -4,6 +4,8 @@ export type Packages = {
     precio: number
 }; 
 
+export type Package = Packages;
+
 export type initialStatePackages = {
     packages: Packages[] | [] | null
 }

@@ -1,4 +1,4 @@
-export type Clients = {
+export type Client = {
     identificacion: string,
     nombre: string,
     ciudad: string,
@@ -7,7 +7,3 @@ export type Clients = {
     correo: string,
     id_cliente: string
 };
-
-export type initialStateClients = {
-    clients: Clients[] | [] | null
-}

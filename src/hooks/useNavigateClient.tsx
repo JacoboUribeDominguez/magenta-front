@@ -5,15 +5,15 @@ const useNavigateClient = () => {
     const navigateClient = useNavigate();
 
     const redireccionarCrear = () => {
-        navigateClient("/crearClient")
+        navigateClient("/createClient")
     }
 
     const redireccionarVolver = () => {
-        navigateClient("/client")
+        navigateClient(-1)
     }
 
     const redireccionarVer = (id: {}) => {
-        navigateClient(`/modificarClient/${id}`)
+        navigateClient(`/updateClient/${id}`)
     }
 
     return {

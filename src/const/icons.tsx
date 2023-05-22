@@ -8,11 +8,13 @@ import { MdNavigateBefore } from 'react-icons/md'
 
 import { TfiPackage } from 'react-icons/tfi'
 
-import { AiOutlineUser } from 'react-icons/ai'
+import { AiOutlineArrowLeft, AiOutlineSave, AiOutlineUser } from 'react-icons/ai'
 
 import { RiLockPasswordLine } from 'react-icons/ri'
 
 import { IoMdTrash } from 'react-icons/io'
+
+import { FiEdit } from 'react-icons/fi'
 
 export const IconServer = <FaServer />
 
@@ -33,3 +35,9 @@ export const IconFacebook = <FaFacebookF />
 export const IconGoogle = <BsGoogle />
 
 export const IconTrash = <IoMdTrash />
+
+export const IconEdit = <FiEdit />
+
+export const IconSave = <AiOutlineSave />
+
+export const IconLeft = <AiOutlineArrowLeft />

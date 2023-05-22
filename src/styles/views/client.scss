@@ -12,7 +12,7 @@
         width: 100%;
     }
 
-    div {
+    &>div:nth-child(2) {
         @apply grid grid-cols-4 gap-7;
 
         svg {
@@ -38,5 +38,21 @@
                 }
             }
         }
+    }
+}
+
+.icon-add {
+    animation: icon-add ease-out 3s infinite;
+}
+
+@keyframes icon-add {
+    0% {
+        transform: scale(1.25);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.25);
     }
 }

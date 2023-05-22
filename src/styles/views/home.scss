@@ -39,4 +39,24 @@
             }
         }
     }
+
+    .input-date {
+        .p-inputtext, .p-button {
+            @apply py-1;
+        }
+
+        .p-inputtext {
+            @apply border-0 w-[8rem];
+            outline: none !important;
+        }
+
+        .p-button{
+            @apply bg-gradinat-secondary-lr border-0;
+        }
+    }
+
+    .p-inputtextarea {
+        @apply bg-primary-900 border-0 text-white;
+        box-shadow: none !important;
+    }
 }

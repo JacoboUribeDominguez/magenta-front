@@ -24,14 +24,14 @@ const CrearPackage = () => {
             <div className="w-full flex justify-center py-10">
                 <input
                     name="nombre"
-                    className="mx-4 py-3 px-2 bg-transparent border-b-white border-b placeholder:text-white"
+                    className="outline-none text-white mx-4 py-3 px-2 bg-transparent border-b-white border-b placeholder:text-white"
                     type="text"
                     placeholder='Digita el nombre'
                     onChange={(e) => modificarData(e.target.name, e.target.value)} value={nombre}
                 />
                 <input
                     name="precio"
-                    className="mx-4 py-3 px-2 bg-transparent border-b-white border-b placeholder:text-white"
+                    className="outline-none text-white mx-4 py-3 px-2 bg-transparent border-b-white border-b placeholder:text-white"
                     type="text"
                     placeholder='Digita el precio'
                     onChange={(e) => modificarData(e.target.name, e.target.value)} value={precio}

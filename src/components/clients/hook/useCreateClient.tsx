@@ -42,7 +42,7 @@ const useCreateClient = (id: string = '') => {
         })
     }
 
-    const modificarCliente = async () => {
+    const updateClient = async () => {
 
         await fetch('http://localhost:3000/clients/modificar', {
             method: 'PUT',
@@ -58,7 +58,7 @@ const useCreateClient = (id: string = '') => {
         redireccionarVolver()
     }
 
-    const crearCliente = async () => {
+    const createCliente = async () => {
         const valoresVacios = Object.values(data).find((name) => name.length === 0)
         if (valoresVacios === '') {
             console.log(valoresVacios)
@@ -66,7 +66,7 @@ const useCreateClient = (id: string = '') => {
         }
 
         //crear cliente
-        await fetch('http://localhost:3000/clients/crear', {
+        await fetch('http://localhost:3000/clients/', {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
@@ -80,8 +80,8 @@ const useCreateClient = (id: string = '') => {
     return ({
         modificarData: modificarData,
         data,
-        crearCliente,
-        modificarCliente
+        createCliente,
+        updateClient
     })
 }
 

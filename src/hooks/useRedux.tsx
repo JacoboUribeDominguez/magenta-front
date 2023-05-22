@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import { RootState } from '../stageManagement/store'
-import { Clients } from '../models/commonClient'
+import { Client } from '../models/commonClient'
 import { Packages } from '../models/commonPackage'
 
 const useRedux = () => {
@@ -11,14 +11,21 @@ const useRedux = () => {
     })
 
     //métodos para obtener el estado
+    //hostings
     const getHostings = () => {
         return state.hosting.hostings
     }
 
-    const getClients = (): Clients[] | [] | null => {
+    //clients
+    const getClients = (): Client[] | [] | null => {
         return state.client.clients
     }
 
+    const getFilteredClients = (): Client[] | [] | null => {
+        return state.client.filtered_clients
+    }
+
+    //packages
     const getPackages = (): Packages[] | [] | null => {
         return state.package.packages
     }
@@ -26,6 +33,7 @@ const useRedux = () => {
     return {
         getHostings,
         getClients,
+        getFilteredClients,
         getPackages
     }
 }

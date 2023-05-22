@@ -5,7 +5,12 @@
 @import "./components/title.scss";
 @import "./components/bg-gradiant.scss";
 @import "./components/package.scss";
+@import "./components/spinner.scss";
 
 /*views*/
 @import "./views/home.scss";
 @import "./views/client.scss";
+
+/* animations */
+
+@import './animations/animations.scss'

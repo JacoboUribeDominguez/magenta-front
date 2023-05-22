@@ -4,11 +4,15 @@ import {
 } from "react-router-dom";
 import Sidebar from "../components/sidebar/Sidebar";
 import Home from "../views/home/Home";
-import Client from "../views/client/Client";
-import CrearClient from "../components/clients/CrearClient";
+import Clients from "../views/client/Clients";
+import CreateClient from "../components/clients/CreateClient";
 import { render } from "react-dom";
 import Paquete from "../views/package/Paquete";
 import CrearPackage from "../components/package/CrearPackage";
+import FirstTime from "../views/FirstTime/FirstTime";
+import Login from "../views/Login/Login";
+import NotFound from "../views/NotFound/NotFound";
+import Client from "../components/clients/Client/Client";
 
 const router = createBrowserRouter([
     {
@@ -21,15 +25,24 @@ const router = createBrowserRouter([
             },
             {
                 path: "client",
-                element: <Client />
+                children: [
+                    {
+                        index: true,
+                        element: <Clients />,
+                    },
+                    {
+                        path: ':name',
+                        element: <Client />
+                    }
+                ]
             },
             {
-                path: "crearClient",
-                element: <CrearClient />
+                path: "createClient",
+                element: <CreateClient />
             },
             {
-                path: "modificarClient/:id",
-                element: <CrearClient />
+                path: "updateClient/:id",
+                element: <CreateClient />
             },
             {
                 path: "package",
@@ -45,6 +58,18 @@ const router = createBrowserRouter([
             }
         ]
     },
+    {
+        path: '/FirstHosting',
+        element: <FirstTime />,
+    },
+    {
+        path: '/login',
+        element: <Login />
+    },
+    {
+        path: '/NotFound',
+        element: <NotFound />
+    }
 ]);
 
 
